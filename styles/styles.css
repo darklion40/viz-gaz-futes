@@ -1,0 +1,95 @@
+
+body {
+    overflow-x: hidden
+}
+
+.c {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+
+    height: 50px;
+    width: 200px;
+
+   
+
+    position: absolute;
+    left: 50vw;
+    margin-left: -100px;
+    top: 550px;
+    margin-top: -50px;
+    z-index: 10;
+
+    display: grid;
+    font-size: 4vw;
+
+    opacity: 0;
+    animation-name: fade;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.heroTexts {
+    font-family: 'Roboto', sans-serif;
+
+    color: white;
+    font-size: 80px;
+
+
+    position: absolute;
+        z-index: 5;
+        left: 0;
+        right: 0;
+        top: 300px;
+
+    opacity: 0;
+    animation-name: fromup;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.heroParagraph {
+    opacity: 0;
+    margin-top: 100px;
+
+    animation-name: fromdown;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#hero {
+    margin-left: -18vw;
+    width: 2000px;
+
+    animation-name: shadowy;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+}
+
+@keyframes shadowy {
+    from {filter: brightness(1);}
+    to {filter: brightness(0.4);}
+}
+@keyframes fromup {
+    from {opacity: 0; top: 5%;}
+    to {opacity: 1;}
+}
+@keyframes fromdown {
+    from {opacity: 0; top: 50%;}
+    to {opacity: 1;}
+}
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media only screen and (max-width: 1100px) {
+    .heroTexts {
+        font-size: 60px;
+        top: 200px;
+    }
+    .heroParagraph {
+        top: 250px;
+    }
+  }
